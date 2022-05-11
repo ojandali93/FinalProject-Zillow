@@ -10,11 +10,7 @@ app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 
-###########################
-# Authentication
-###########################
 
-# TODO: Add authentication setup code here!
 
 
 

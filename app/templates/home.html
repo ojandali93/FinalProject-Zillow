@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Zillow: Your New Home Is Waiting</h1>
+
+<p><em>The best place to find properties for sale!</em></p>
+
+<h2>All Properties</h2>
+
+{% for property in all_properties %}
+<div class="property">
+    <a href="/property/{{ property.id }}">View Property</a> - 
+    <p><strong>Address:</strong> {{ property.address }}</p>
+    <p><strong>price:</strong> {{ property.price }}</p>
+    <p><strong>Status:</strong> {{ property.status }}</p>
+</div>
+{% endfor %}
+
+<a href="{{ url_for('main.createProperty')}}">
+  add property
+</a>
+
+{% endblock %}

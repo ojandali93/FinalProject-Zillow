@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Zillow: Your New Home Is Waiting</h1>
+
+<p><em>The best place to find properties for sale!</em></p>
+
+<h2>Add a new property</h2>
+<form method="POST">
+  <fieldset>
+      <legend>Please enter your information:</legend>
+        {{ form.address.label }}
+        {{ form.address(class="address-input") }}
+        {{ form.beds.label }}
+        {{ form.beds(class="beds-input") }}
+        {{ form.baths.label }}
+        {{ form.baths(class="baths-input") }}
+        {{ form.sqft.label }}
+        {{ form.sqft(class="sqft-input") }}
+        {{ form.price.label }}
+        {{ form.price(class="price-input") }}
+        {{ form.status.label }}
+        {{ form.status(class="status-input") }}
+      <input type="submit" value="Submit">
+  </fieldset>
+</form>
+{% endfor %}
+
+{% endblock %}

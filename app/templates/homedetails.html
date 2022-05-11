@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Zillow: Your New Home Is Waiting</h1>
+
+<p><em>The best place to find properties for sale!</em></p>
+
+<h2>{{ property.address }}</h2>
+<div class="property">
+    <p><strong>Beds:</strong> {{ property.beds }}</p>
+    <p><strong>Baths:</strong> {{ property.baths }}</p>
+    <p><strong>Sqft.:</strong> {{ property.sqft }}</p>
+    <p><strong>price:</strong> {{ property.price }}</p>
+    <p><strong>Status:</strong> {{ property.status }}</p>
+</div>
+
+{% endblock %}
